@@ -1,0 +1,823 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.cf:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.loding_screen {
+  width: 100vw;
+  height: 100vh;
+  background: #0378ae;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50000000000000000000;
+}
+.loding_screen img {
+  width: 155px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.ala {
+  width: 70%;
+  height: 100vh;
+  line-height: 100vh;
+  margin: 0 auto;
+  text-align: center;
+  color: rgb(154, 34, 184);
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+#jinheewrap {
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.moblie_wrap {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+header {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 15px 0;
+  box-sizing: border-box;
+}
+header .jin_up {
+  width: 49%;
+  margin-left: auto;
+  display: flex;
+  justify-content: space-between;
+}
+header .jin_up li {
+  width: 16.6666%;
+}
+header .jin_up li a {
+  width: 100%;
+  font-size: 0.7rem;
+  text-align: center;
+  line-height: 30px;
+  position: relative;
+}
+header .jin_up li a::after {
+  content: "";
+  width: 1px;
+  height: 13px;
+  background: #03345a;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+header .jin_up li:last-child a::after {
+  display: none;
+}
+header .jin_up li a img {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 5.2px;
+}
+header .jin_up li a .np2 {
+  width: 10px;
+  height: 8px;
+  position: relative;
+  top: 0px;
+}
+header .jin_up li a .np3 {
+  display: inline-block;
+  width: 18px;
+  line-height: 18px;
+  background: #3477bc;
+  border-radius: 50%;
+  color: white;
+  margin-left: 5px;
+}
+header .jin_up li a .jine1 {
+  margin-left: 7px;
+}
+header .jin_up li a .jine2 {
+  margin-right: 7px;
+}
+
+/* ---------------------------up end--------------------------- */
+
+header #jin_medium {
+  margin-top: 25px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+header #jin_medium .naunlogo {
+  width: 23%;
+}
+header #jin_medium .naunlogo img {
+  width: 220px;
+}
+#jin_medium .jin_search {
+  width: 41%;
+}
+#jin_medium .jin_search .search {
+  display: flex;
+}
+#jin_medium .jin_search #naum_search {
+  width: 425px;
+  height: 43px;
+  border: none;
+  border-radius: 50px;
+  margin-top: 10px;
+  background: #f4f4f4;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+#jin_medium .jin_search #naum_search::placeholder {
+  color: rgba(75, 73, 73, 0.7);
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+#jin_medium .jin_search .naum_button {
+  width: 55px;
+  line-height: 43px;
+  height: 43px;
+  text-align: center;
+  background: #65b2e8;
+  border-radius: 0 25px 25px 0;
+  margin-top: 10px;
+  margin-left: -55px;
+  cursor: pointer;
+}
+#jin_medium .jin_search .naum_button img {
+  width: 27px;
+  height: 27px;
+  position: relative;
+  top: calc(50% - 13.5px);
+}
+
+header #jin_medium .ranking_slide {
+  width: 33%;
+  display: flex;
+  margin-top: 15px;
+}
+#jin_medium .ranking_slide .slide_title {
+  width: 120px;
+  line-height: 33px;
+  height: 33px;
+  color: white;
+  background: #07689f;
+  text-align: center;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  margin-right: 14px;
+}
+
+.ranking_slide .r_number {
+  color: #e22757;
+  font-size: 1.2rem;
+  font-family: "Noto Sans KR", sans-serif;
+  float: left;
+  margin-right: 15px;
+}
+.ranking_slide .rank_box {
+  display: flex;
+  margin-top: 2px;
+}
+.ranking_slide .rank_box .ranker_info_box {
+  width: 130%;
+  margin-top: 2px;
+}
+.ranking_slide .rank_box .ranker_info_box span {
+  font-size: 0.85rem;
+  margin-right: 20px;
+}
+.ranking_slide .rank_box .ranker_info_box .op1 {
+  color: #07689f;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-right: 2px;
+}
+.ranking_slide .rank_box .n_arrow {
+  margin-left: 35px;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+/* --------------------------jin_medium end----------------------------- */
+
+#jinhee_pcnav {
+  width: 100%;
+  height: 49px;
+  border-top: 1px solid rgba(151, 151, 151, 0.3);
+}
+#jinhee_pcnav #pc_nav {
+  max-width: 1360px;
+  height: 49px;
+  line-height: 49px;
+  margin: 0 auto;
+  display: flex;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333232;
+}
+#jinhee_pcnav #pc_nav .all_menu {
+  width: 22%;
+  text-align: center;
+  cursor: pointer;
+}
+#jinhee_pcnav #pc_nav .all_menu img {
+  width: 22px;
+  height: 22px;
+  position: relative;
+  top: 5px;
+  margin-right: 5px;
+}
+#jinhee_pcnav #pc_nav .semi_nav {
+  width: 74%;
+  display: flex;
+  justify-content: space-around;
+  margin-left: auto;
+}
+#jinhee_pcnav #pc_nav .semi_nav li {
+  width: 12.555%;
+}
+#jinhee_pcnav #pc_nav .semi_nav li a {
+  text-align: center;
+}
+
+/* ------------------------------heaer, pc_nav end------------------------------ */
+
+#moblie_header {
+  display: none;
+}
+
+#main_slider {
+  width: 100%;
+  height: 610px;
+  position: relative;
+}
+#main_slider .jinhee_naum {
+  width: 100%;
+  height: 610px;
+}
+#main_slider .jinhee_naum li a img {
+  width: 100%;
+  height: 610px;
+}
+
+#main_slider .pont {
+  width: 95px;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#main_slider .pont li a {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #052e4b;
+}
+
+#jinheewrap .molie_slide {
+  display: none;
+}
+
+/* -----------------------------main_slider end---------------------------------- */
+
+#jinhee_exhibition {
+  width: 100%;
+  height: 451px;
+  background: #f0f0f0;
+  margin-top: 50px;
+}
+#jinhee_exhibition .exhi_jin {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+#jinhee_exhibition .exhi_jin h3 {
+  color: #03345a;
+  font-size: 1.9rem;
+  font-weight: 500;
+  float: left;
+  line-height: 38px;
+}
+#jinhee_exhibition .exhi_jin span {
+  display: inline-block;
+  line-height: 38px;
+  color: #87888a;
+  margin-left: 15px;
+  font-weight: 500;
+}
+
+#jinhee_exhibition .exhi_jin .exhibition {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+#jinhee_exhibition .exhi_jin .exhibition li {
+  width: 30.5%;
+  text-align: center;
+}
+#jinhee_exhibition .exhi_jin .exhibition .img_exh {
+  width: 100%;
+  height: 265px;
+  border-radius: 35px;
+  overflow: hidden;
+}
+#jinhee_exhibition .exhi_jin .exhibition .img_exh img {
+  width: 100%;
+}
+.exhi_jin .exhibition li a {
+  width: 130px;
+  line-height: 38px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 25px;
+  border-radius: 25px;
+  color: white;
+  background: #927f65;
+}
+
+#moblie_catbutton {
+  display: none;
+}
+#only_moblie {
+  display: none;
+}
+
+/* -------------------------------기획전 END-------------------------------- */
+
+#ex_container {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+#ex_container h2 {
+  color: #393838;
+  font-weight: bold;
+  font-size: 1.8rem;
+  float: left;
+  line-height: 38px;
+}
+#ex_container h2 span {
+  color: #3c99dc;
+}
+#ex_container .sub {
+  display: inline-block;
+  line-height: 38px;
+  margin-left: 20px;
+  color: #87888a;
+  font-weight: 500;
+}
+#ex_container .pont {
+  width: 95px;
+  display: flex;
+  justify-content: space-around;
+  margin-left: auto;
+  margin-top: 8px;
+}
+#ex_container .pont li a {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #c4c4c4;
+}
+
+/* .slick-slide {margin:0 16px;}  */
+
+#ex_container #product_jin {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+#ex_container #product_jin li {
+  width: 23.5%;
+  height: 475px;
+}
+#ex_container #product_jin li a {
+  width: 100%;
+}
+#ex_container #product_jin li a .product_img {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+#product_jin li a .product_img .jinhee_img {
+  width: 100%;
+  height: 300px;
+}
+
+#ex_container #product_jin li a .product_img .plag {
+  position: absolute;
+  top: 0;
+  left: -5px;
+}
+#ex_container #product_jin li a .product_img .plag img {
+  width: 53px;
+  height: 62px;
+}
+#ex_container #product_jin li a .product_img .plag span {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.3rem;
+}
+#ex_container #product_jin li a h3 {
+  width: 100%;
+  line-height: 38px;
+  margin-top: 7px;
+  position: relative;
+  color: #434242;
+  font-size: 1rem;
+}
+#ex_container #product_jin li a h3 .hart {
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  top: 2px;
+  right: 0;
+}
+#ex_container #product_jin li a p {
+  width: 78%;
+  line-height: 24px;
+  height: 50px;
+  color: #504f4f;
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-top: -3px;
+}
+#ex_container #product_jin li a .product_price {
+  width: 100%;
+  display: flex;
+  margin-top: 25px;
+}
+#product_jin li a .product_price .sale {
+  width: 26%;
+  color: #e22757;
+  font-weight: bold;
+  font-size: 1.7rem;
+  font-family: "Roboto", sans-serif;
+}
+#product_jin li a .product_price .ohjinhee_point {
+  width: 38%;
+  margin-top: -9px;
+}
+#product_jin li a .product_price .ohjinhee_point h4 {
+  width: 100%;
+  color: #434242;
+  font-size: 0.85rem;
+  line-height: 18px;
+}
+#product_jin li a .product_price .ohjinhee_point .n9 {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  top: 2px;
+  margin-right: 6px;
+}
+.product_price .ohjinhee_point h3 {
+  width: 100%;
+  line-height: 25px;
+  color: #2c2c2c;
+  margin-top: -10px;
+  font-size: 0.95rem;
+  position: relative;
+  top: -14px;
+}
+.product_price .ohjinhee_point h3 span {
+  font-size: 1rem;
+}
+
+#product_jin li a .product_price .original_p {
+  color: #6b6969;
+  font-size: 0.83rem;
+  margin-top: 11px;
+}
+#product_jin li a .product_price .original_p span {
+  font-size: 0.9rem;
+  text-decoration: line-through;
+}
+
+#product_jin li a .naum_star {
+  width: 100%;
+  display: flex;
+  margin-top: -13px;
+}
+#product_jin li a .naum_star .jinhee_star img {
+  width: 18px;
+  height: 18px;
+}
+#product_jin li a .naum_star h4 {
+  color: #e22757;
+  font-size: 0.78rem;
+  margin-left: auto;
+}
+#product_jin li a .naum_star h4 span {
+  color: #606060;
+  font-size: 0.71rem;
+  margin-left: 2px;
+}
+.jinhee_nct2 {
+  margin-top: 75px;
+}
+
+/* ---------------------------------상품box end----------------------------- */
+
+#jinheewrap .band_best {
+  width: 100%;
+  height: 180px;
+  background: #657d98;
+  margin-top: 155px;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+#jinheewrap .band_best .band2jin {
+  width: calc(100% - 26px);
+  height: 154px;
+  border: 1px solid white;
+  padding: 30px 0;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+#jinheewrap .band_best .band2jin h1 {
+  width: 100%;
+  line-height: 50px;
+  font-size: 2.2rem;
+}
+#jinheewrap .band_best .band2jin p {
+  width: 100%;
+  font-size: 1.3rem;
+  margin-top: 15px;
+  font-weight: 400;
+}
+
+/* ------------------------------카데고리별 베스트 상품 추천 시작-------------------------------- */
+
+.best_jinprod_con {
+  margin-top: 115px;
+}
+.best_jinprod_con .ca_title {
+  width: 100%;
+  color: #03204c;
+  font-size: 1.6rem;
+  text-align: center;
+  position: relative;
+  line-height: 42px;
+}
+.best_jinprod_con .ca_title span {
+  color: #414141;
+  font-size: 0.9rem;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+
+.best_jinprod_con #best_jinprod_box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 31px;
+}
+.best_jinprod_con #best_jinprod_box #best_exhibition {
+  width: 49.3%;
+}
+#best_jinprod_box #best_exhibition .mini_exhibition {
+  width: 100%;
+  height: 280px;
+  position: relative;
+}
+#best_jinprod_box #best_exhibition .mini_exhibition img {
+  width: 100%;
+  height: 280px;
+}
+#best_exhibition .mini_exhibition .exhibition_text {
+  width: 100%;
+  padding: 35px 50px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#best_exhibition .mini_exhibition .exhibition_text h3 {
+  color: #484848;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 50px;
+}
+#best_exhibition .mini_exhibition .exhibition_text p {
+  color: rgba(72, 72, 72, 0.85);
+  font-size: 0.8rem;
+  line-height: 23px;
+  margin-top: 30px;
+}
+#best_exhibition:nth-child(2) .mini_exhibition .exhibition_text h3 {
+  color: #021a3e;
+}
+#best_exhibition:nth-child(2) .mini_exhibition .exhibition_text h4 {
+  color: #021a3e;
+  font-size: 1.2rem;
+  margin-top: 5px;
+}
+#best_exhibition:nth-child(2) .mini_exhibition .exhibition_text p {
+  color: #021634;
+  margin-top: 50px;
+}
+
+#best_jinprod_box #best_exhibition #product_jin {
+  margin-top: 17px;
+}
+#best_jinprod_box #best_exhibition #product_jin li {
+  width: 48.5%;
+}
+#best_jinprod_box #best_exhibition #product_jin li a .product_img {
+  width: 100%;
+  height: 295px;
+  position: relative;
+}
+#best_jinprod_box #best_exhibition #product_jin li a .product_img .jinhee_img {
+  width: 100%;
+  height: 295px;
+}
+
+.best_jinprod_con .nm_set .point {
+  width: 80px;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.best_jinprod_con .nm_set .point li a {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #c4c4c4;
+}
+
+.best_jinprod_con .title2 {
+  margin-top: 90px;
+}
+
+/* ------------------------------카데고리별 베스트 상품 추천  end----------------------------------- */
+
+#jinheewrap footer {
+  width: 100%;
+  background: #eeeeee;
+  padding: 10px 0;
+  box-sizing: border-box;
+  margin-top: 180px;
+}
+
+footer .footer_up {
+  width: 100%;
+  padding: 0 405px;
+  box-sizing: border-box;
+  line-height: 55px;
+  display: flex;
+  border-bottom: 1px solid rgba(177, 173, 173, 0.45);
+}
+footer .footer_up li a {
+  padding: 0 30px;
+  box-sizing: border-box;
+  text-align: center;
+  color: #0f5298;
+  font-weight: bold;
+  font-size: 1rem;
+}
+#jinheewrap footer #footer_content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 35px 0 15px 0;
+  box-sizing: border-box;
+}
+#jinheewrap footer #footer_content .footer_meddle {
+  width: 100%;
+  display: flex;
+}
+footer #footer_content .footer_meddle .f_logo {
+  width: 25%;
+}
+footer #footer_content .footer_meddle .foo_intro {
+  width: 38%;
+}
+footer #footer_content .footer_meddle .f_logo img {
+  width: 155px;
+}
+
+footer #footer_content .footer_meddle .foo_intro li a {
+  width: 100%;
+  color: #363737;
+  font-size: 0.84rem;
+  line-height: 29px;
+}
+footer #footer_content .footer_meddle .foo_intro li:first-child a {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #363737;
+  margin-bottom: 15px;
+}
+.footer_meddle .foo_intro li a .naum_b {
+  display: inline-block;
+  width: 110px;
+  line-height: 22px;
+  border-radius: 50px;
+  border: 1px solid #0f5298;
+  text-align: center;
+  font-size: 0.74rem;
+  margin-left: 19px;
+}
+
+#footer_content .footer_meddle .sevice_naumjin {
+  width: 37%;
+  display: flex;
+}
+.footer_meddle .sevice_naumjin img {
+  widows: 60px;
+  height: 60px;
+  margin-right: 25px;
+}
+.footer_meddle .sevice_naumjin .scro_naum li {
+  line-height: 29px;
+  color: #363737;
+  font-size: 0.84rem;
+}
+.sevice_naumjin .scro_naum li:first-child span {
+  font-weight: bold;
+}
+.sevice_naumjin .scro_naum li:first-child {
+  margin-bottom: 15px;
+}
+
+.sevice_naumjin .scro_naum a {
+  width: 110px;
+  line-height: 22px;
+  border-radius: 50px;
+  color: #343434;
+  border: 1px solid #0f5298;
+  text-align: center;
+  font-size: 0.74rem;
+  margin-top: 20px;
+}
+
+footer #footer_content .footer_lower {
+  width: 100%;
+  margin-top: 45px;
+  color: #363737;
+  font-size: 0.96rem;
+  font-weight: 500;
+  margin-left: 300px;
+}
+
+/* ---------------------------------------footer end----------------------------------- */
+
+.top_but {
+  width: 50px;
+  height: 50px;
+  background: rgba(181, 183, 184, 0.7);
+  border-radius: 50%;
+  border: 1px solid #2565ad;
+  position: fixed;
+  bottom: 15%;
+  right: 150px;
+  text-align: center;
+}
+.top_but img {
+  width: 30px;
+  height: 25px;
+  margin-top: 11px;
+}
+
+/* ----------------------------------------라이브 커머스 시작 (jinhee)----------------------------------- */
