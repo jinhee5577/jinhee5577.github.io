@@ -103,9 +103,7 @@ $('.moblie_home_bu li a').click(
                   $(this).attr('href','./A이걸봐주세요_naum_moblie.html');
             }else if(jinnum === 4){
                   $(this).attr('href','./naum_shpping_info.html');
-            }
-
-           
+            }           
       }
 );
 
@@ -132,13 +130,13 @@ let poit_j = document.querySelector(".poit_j");
          let paynum = Number($(j).closest('.up_down').children('h4').text());
         //  console.log(paynum);
          let numh4 = $('.up_down').children('h4');
-         let tosum = Number($('.sum_price').children('.tosum').text());
+         let tosum = Number($(j).closest('.up_down').parent('.total_price').children('.sum_price').children('.tosum').text());
          let tosum_text = $('.sum_price').children('.tosum');
-            console.log(tosum);
-            
+        //    console.log(tosum);
+     
          if( type == '+' ){
             paynum++; 
-            numh4.text(paynum);   
+            numh4.text(paynum);               
          } else if( type == '-' ){
               if( paynum > 1 ){
                   paynum--;      
@@ -146,6 +144,24 @@ let poit_j = document.querySelector(".poit_j");
               }
          }   
 
-      //    let uu = Number( numh4.text(paynum) );
-      //    tosum_text.text( tosum * uu );           
+      //   console.log(numh4.text());
+         let uu = Number( numh4.text() );
+         console.log(uu);       
+         let origin_price = Number($('#origin_price').val());   
+        console.log(origin_price);   
+        tosum_text.text( origin_price * uu );  
+
+      //    $("#origin_price").change(
+      //          () => {
+      //             let origin_price = Number($('#origin_price').val());   
+      //             console.log(origin_price);   
+      //             let uu = Number( numh4.text() );
+      //             console.log(uu); 
+      //             tosum_text.text( origin_price * uu );  
+      //          }
+      //    );     
+              
    }  
+
+
+  
