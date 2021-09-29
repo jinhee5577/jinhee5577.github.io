@@ -131,7 +131,7 @@ let poit_j = document.querySelector(".poit_j");
         //  console.log(paynum);
          let numh4 = $('.up_down').children('h4');
          let tosum = Number($(j).closest('.up_down').parent('.total_price').children('.sum_price').children('.tosum').text());
-         let tosum_text = $('.sum_price').children('.tosum');
+         let tosum_text = $('.sum_price').children('.haram').children('.tosum');
         //    console.log(tosum);
      
          if( type == '+' ){
@@ -148,19 +148,8 @@ let poit_j = document.querySelector(".poit_j");
          let uu = Number( numh4.text() );
          console.log(uu);       
          let origin_price = Number($('#origin_price').val());   
-        console.log(origin_price);   
-        tosum_text.text( origin_price * uu );  
-
-      //    $("#origin_price").change(
-      //          () => {
-      //             let origin_price = Number($('#origin_price').val());   
-      //             console.log(origin_price);   
-      //             let uu = Number( numh4.text() );
-      //             console.log(uu); 
-      //             tosum_text.text( origin_price * uu );  
-      //          }
-      //    );     
-              
+         console.log(origin_price * uu);   
+         tosum_text.text( origin_price * uu );      
    }  
 
 
