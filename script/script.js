@@ -4,6 +4,27 @@ $(".top_but").click(
       });
 
 
+$(".all_menu").click(
+      function(){
+            $("#jin_navwrawp").stop().show();
+      }
+);     
+
+
+$(".sub_menubox img").click(
+      function(){
+            $("#jin_navwrawp").stop().slideUp(300);
+      });
+
+
+$(".jin_mainmenu>li").hover(
+      function(){
+            $(".jinhee_oh").stop().hide();         
+            $(this).find(".jinhee_oh").stop().show();
+      }
+);
+
+
 $(".naum_menu1").on("click",function(){
     $(".naum_menu1").css("transform","unset");
     $(this).css("transform", "translate3d( -3px, -3px, -10px)");
